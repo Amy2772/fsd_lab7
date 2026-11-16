@@ -1,0 +1,59 @@
+
+/* Join page and navigation action */
+.join-page {
+  width: min(900px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 70px 0 90px;
+}
+.join-page-hero { max-width: 720px; margin: 0 auto 32px; text-align: center; }
+.join-page-hero h1 {
+  margin: 14px 0;
+  color: #332c29;
+  font: 600 clamp(2.3rem, 5vw, 4rem)/1.08 "Fraunces", Georgia, serif;
+}
+.join-page-hero h1 em { color: #e56d58; }
+.join-page-hero p { color: #786e66; line-height: 1.7; }
+.join-page-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid #eee2d6;
+  border-radius: 26px;
+  background: rgba(255,253,248,.95);
+  box-shadow: 0 16px 45px rgba(51,44,41,.07);
+}
+.join-page-form label { display: flex; flex-direction: column; gap: 8px; color: #51473f; font-weight: 650; }
+.join-page-form input, .join-page-form select {
+  width: 100%; min-width: 0; padding: 14px 15px;
+  border: 1px solid #e4d9cd; border-radius: 12px;
+  background: #fffefa; color: #332c29; font: inherit;
+}
+.join-page-form input:focus, .join-page-form select:focus {
+  outline: 2px solid rgba(255,113,91,.2); border-color: #ff715b;
+}
+.join-page-submit {
+  grid-column: 1 / -1; padding: 15px 22px; border: 0;
+  border-radius: 999px; background: #ff715b; color: white;
+  font: inherit; font-weight: 750; cursor: pointer;
+}
+.join-page-message { grid-column: 1 / -1; margin: 0; color: #23856f; font-weight: 650; }
+.join-page-links { display: flex; justify-content: center; gap: 22px; margin-top: 24px; }
+.join-page-links a, .join-page-links button {
+  border: 0; background: transparent; color: #b95142;
+  font: inherit; font-weight: 650; text-decoration: underline; cursor: pointer;
+}
+.nn-view-request-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto; padding: 12px 20px; border-radius: 999px;
+  background: #ff715b; color: #fff; text-decoration: none;
+  font: inherit; font-weight: 750; cursor: pointer;
+  pointer-events: auto; position: relative; z-index: 5;
+}
+.nn-view-request-link:hover { background: #e96350; }
+.join-button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+@media (max-width: 650px) {
+  .join-page-form { grid-template-columns: 1fr; }
+  .join-page-submit, .join-page-message { grid-column: auto; }
+  .join-page-links { flex-direction: column; align-items: center; }
+}
